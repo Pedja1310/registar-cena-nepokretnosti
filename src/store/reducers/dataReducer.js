@@ -5,8 +5,7 @@ const initialState = {};
 const dataReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_DATA:
-      console.log("data reducer");
-      return state;
+      return { ...action.payload };
     default:
       return state;
   }

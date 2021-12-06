@@ -1,19 +1,15 @@
 import axios from "axios";
 
-const fetchData = (payload) => {
-  const { startDate, endDate, cityId, cityCadasterId, realEstateType } =
-    payload;
-
+const fetchData = (payload) =>
   axios.post(
     "https://warm-river-64553.herokuapp.com/https://katastar.rgz.gov.rs/RegistarCenaNepokretnosti/Default.aspx/Data",
     {
-      DatumPocetak: startDate,
-      DatumZavrsetak: endDate,
-      OpstinaID: cityId,
-      KoID: cityCadasterId,
-      VrsteNepokretnosti: realEstateType,
+      DatumPocetak: payload.startDate,
+      DatumZavrsetak: payload.endDate,
+      OpstinaID: payload.cityId,
+      KoID: payload.cityCadasterId,
+      VrsteNepokretnosti: payload.realEstateType,
     }
   );
-};
 
 export default fetchData;

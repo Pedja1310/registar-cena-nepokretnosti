@@ -1,13 +1,13 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Grid } from "@mui/material";
 import Button from "@mui/material/Button";
-
 import Typography from "@mui/material/Typography";
 
 import CustomDatePicker from "./DatePicker";
 import LocationMenu from "./LocationMenu";
 import MenuSectionWrapper from "./MenuSectionWrapper";
-import fetchData from "../api";
+import { getData } from "../store/actions/dataActions";
 
 const Search = () => {
   const [startDate, setStartDate] = useState("");
@@ -15,6 +15,8 @@ const Search = () => {
   const [cityId, setCityId] = useState("");
   const [cityCadasterId, setCityCadasterId] = useState("");
   const [realEstateType, setRealEstateType] = useState("831");
+
+  const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,9 +29,7 @@ const Search = () => {
       realEstateType,
     };
 
-    const res = await fetchData(payload);
-
-    // console.log(console.log(payload));
+    dispatch(getData(payload));
   };
 
   return (
