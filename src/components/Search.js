@@ -14,7 +14,7 @@ const Search = () => {
   const [endDate, setEndDate] = useState("");
   const [cityId, setCityId] = useState("");
   const [cityCadasterId, setCityCadasterId] = useState("");
-  const [realEstateType, setRealEstateType] = useState("831");
+  // const [realEstateType, setRealEstateType] = useState("831");
 
   const dispatch = useDispatch();
 
@@ -26,7 +26,7 @@ const Search = () => {
       endDate,
       cityId,
       cityCadasterId,
-      realEstateType,
+      realEstateType: "831",
     };
 
     dispatch(getData(payload));

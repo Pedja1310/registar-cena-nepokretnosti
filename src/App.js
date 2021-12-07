@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Grid } from "@mui/material";
 
-import Map from "./components/Map";
+// import Map from "./components/Map";
 import Search from "./components/Search";
 import DataDisplay from "./components/DataDisplay";
 

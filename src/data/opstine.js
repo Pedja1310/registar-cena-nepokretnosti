@@ -1,19 +1,11 @@
 const opstine = [
   {
     nazivOpstine: "Smederevo",
-    id: "1",
+    id: "71099",
     katastarskeOpstine: [
       {
-        naziv: "Donji Grad",
-        id: "1",
-      },
-      {
-        naziv: "Carina",
-        id: "2",
-      },
-      {
-        naziv: "Plavinac",
-        id: "3",
+        naziv: "Smederevo",
+        id: "740152",
       },
     ],
   },
