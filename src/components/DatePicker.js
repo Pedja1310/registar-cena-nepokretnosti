@@ -12,7 +12,6 @@ const CustomDatePicker = ({ value, valueUpdater, label }) => {
         onChange={(newValue) => {
           valueUpdater(newValue.format("DD.MM.YYYY"));
         }}
-        format="d"
         renderInput={(props) => (
           <TextField
             {...props}

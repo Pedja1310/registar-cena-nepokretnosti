@@ -35,7 +35,7 @@ const Search = () => {
   return (
     <Grid
       item
-      xs={2}
+      lg={2}
       sx={{
         height: "100vh",
         mr: "20px",
