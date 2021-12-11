@@ -20,9 +20,9 @@ const Map = () => {
 
   let markers = [];
 
-  // if (Object.entries(data).length !== 0) {
-  //   markers = Object.values(data.Ugovori).map((item) => item.n[0].latlon);
-  // }
+  if (Object.entries(data).length !== 0) {
+    markers = Object.values(data.Ugovori).map((item) => item.n[0].latlon);
+  }
 
   const handleOnCreate = (e) => {
     const { _latlngs } = e.layer;
