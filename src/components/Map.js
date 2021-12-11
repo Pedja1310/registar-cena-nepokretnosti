@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Grid } from "@mui/material";
 import {
@@ -21,9 +20,9 @@ const Map = () => {
 
   let markers = [];
 
-  if (Object.entries(data).length !== 0) {
-    markers = Object.values(data.Ugovori).map((item) => item.n[0].latlon);
-  }
+  // if (Object.entries(data).length !== 0) {
+  //   markers = Object.values(data.Ugovori).map((item) => item.n[0].latlon);
+  // }
 
   const handleOnCreate = (e) => {
     const { _latlngs } = e.layer;
@@ -40,7 +39,7 @@ const Map = () => {
   };
 
   return (
-    <Grid item sx={{ padding: "1rem", flex: 1 }}>
+    <Grid item sx={{ padding: "1rem" }}>
       <MapContainer
         center={[44.8125, 20.4612]}
         zoom={12}

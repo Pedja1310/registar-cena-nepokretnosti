@@ -5,7 +5,6 @@ const initialState = { polygon: [] };
 const polygonReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_POLYGON:
-      console.log(action.payload);
       return {
         ...state,
         polygon: [...action.payload],

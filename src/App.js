@@ -16,8 +16,10 @@ function App() {
       <Grid container direction="row">
         <Provider store={store}>
           <Search />
-          <Map />
-          {/* <DataDisplay /> */}
+          <Grid container item direction="column" lg={10}>
+            <Map />
+            <DataDisplay />
+          </Grid>
         </Provider>
       </Grid>
     </>
