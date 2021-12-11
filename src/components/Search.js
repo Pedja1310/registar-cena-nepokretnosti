@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { Grid } from "@mui/material";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import moment from "moment";
 
 import CustomDatePicker from "./DatePicker";
 import LocationMenu from "./LocationMenu";
@@ -20,6 +21,8 @@ const Search = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    console.log(startDate, endDate);
 
     const payload = {
       startDate,

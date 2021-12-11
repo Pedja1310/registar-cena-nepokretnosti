@@ -1,4 +1,4 @@
-import DateAdapter from "@mui/lab/AdapterMoment";
+import DateAdapter from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DatePicker from "@mui/lab/DatePicker";
 import TextField from "@mui/material/TextField";
@@ -9,8 +9,10 @@ const CustomDatePicker = ({ value, valueUpdater, label }) => {
       <DatePicker
         label={label}
         value={value}
+        views={["year", "month", "day"]}
+        inputFormat={"dd/MM/yyyy"}
         onChange={(newValue) => {
-          valueUpdater(newValue.format("DD.MM.YYYY"));
+          valueUpdater(newValue);
         }}
         renderInput={(props) => (
           <TextField
