@@ -1,9 +1,9 @@
-import fetchData from "../../api";
+import refetchDataByDate from "../../api/newFetch";
 import { GET_DATA } from "../constants";
 
 export const getData = (payload) => async (dispatch) => {
   try {
-    const res = await fetchData(payload);
+    const res = await refetchDataByDate(payload);
 
     dispatch({ type: GET_DATA, payload: res.data.d });
   } catch (error) {

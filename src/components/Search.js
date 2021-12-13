@@ -21,8 +21,6 @@ const Search = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(startDate, endDate);
-
     const payload = {
       startDate,
       endDate,
