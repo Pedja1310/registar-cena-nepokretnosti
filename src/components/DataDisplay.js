@@ -1,7 +1,20 @@
 import { useSelector } from "react-redux";
 import { Grid } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import {
+  DataGrid,
+  gridClasses,
+  GridToolbarContainer,
+  GridToolbarExport,
+} from "@mui/x-data-grid";
 import { polygonFilter } from "../utils/polygonFilter";
+
+function CustomToolbar() {
+  return (
+    <GridToolbarContainer className={gridClasses.toolbarContainer}>
+      <GridToolbarExport />
+    </GridToolbarContainer>
+  );
+}
 
 const DataDisplay = () => {
   const data = useSelector((state) => state.data);
@@ -36,7 +49,13 @@ const DataDisplay = () => {
 
   return (
     <Grid item sx={{ padding: "1rem" }}>
-      <DataGrid rows={rows} columns={columns} autoHeight pageSize={20} />
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        autoHeight
+        pageSize={20}
+        components={{ Toolbar: CustomToolbar }}
+      />
     </Grid>
   );
 };
