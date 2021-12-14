@@ -10,10 +10,7 @@ const markerReducer = (state = initialState, action) => {
     case TOGGLE_MARKER:
       return {
         ...state,
-        marker:
-          state.marker.length === 0 || !equals(state.marker, action.payload)
-            ? [...action.payload]
-            : [],
+        marker: !equals(state.marker, action.payload) ? action.payload : [],
       };
     default:
       return state;
