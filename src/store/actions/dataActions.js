@@ -1,4 +1,4 @@
-import refetchDataByDate from "../../api/newFetch";
+import refetchDataByDate from "../../api";
 import { GET_DATA } from "../constants";
 
 export const getData = (payload) => async (dispatch) => {
@@ -7,6 +7,6 @@ export const getData = (payload) => async (dispatch) => {
 
     dispatch({ type: GET_DATA, payload: res.data.d });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };

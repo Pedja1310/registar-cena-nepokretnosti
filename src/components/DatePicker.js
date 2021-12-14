@@ -10,7 +10,6 @@ const CustomDatePicker = ({ value, valueUpdater, label }) => {
         label={label}
         value={value}
         views={["year", "month", "day"]}
-        inputFormat={"dd/MM/yyyy"}
         onChange={(newValue) => {
           valueUpdater(newValue);
         }}

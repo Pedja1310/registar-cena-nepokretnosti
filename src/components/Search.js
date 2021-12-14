@@ -38,7 +38,6 @@ const Search = () => {
       lg={2}
       sx={{
         height: "100vh",
-        // mr: "20px",
         padding: "1rem",
         display: "flex",
         flexDirection: "column",

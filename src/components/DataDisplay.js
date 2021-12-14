@@ -7,6 +7,8 @@ import {
   GridToolbarExport,
 } from "@mui/x-data-grid";
 import { polygonFilter } from "../utils/polygonFilter";
+import { useDispatch } from "react-redux";
+import { toggleMarker } from "../store/actions/markerActions";
 
 function CustomToolbar() {
   return (
@@ -17,8 +19,13 @@ function CustomToolbar() {
 }
 
 const DataDisplay = () => {
+  const dispatch = useDispatch();
   const data = useSelector((state) => state.data);
   const polygon = useSelector((state) => state.polygon.polygon);
+
+  const handleMarkerOnClick = (e) => {
+    dispatch(toggleMarker(e.row.latlng));
+  };
 
   let rows = [];
 
@@ -53,8 +60,9 @@ const DataDisplay = () => {
         rows={rows}
         columns={columns}
         autoHeight
-        pageSize={20}
+        pageSize={25}
         components={{ Toolbar: CustomToolbar }}
+        onRowClick={handleMarkerOnClick}
       />
     </Grid>
   );
