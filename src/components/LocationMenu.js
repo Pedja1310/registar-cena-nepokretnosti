@@ -4,7 +4,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 import opstine from "../data/opstine";
-import { useState } from "react";
+// import { useState } from "react";
 
 const LocationMenu = ({ setCityId, setCityCadasterId }) => {
   // const [katastarskeOpstine, setKatastarskeOpstine] = useState([]);
