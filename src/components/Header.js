@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,11 +14,13 @@ const Header = () => {
             justifyContent: "center",
           }}
         >
-          <img
-            src="/images/kvadrat-logo.png"
-            alt="Applicaiton logo"
-            style={{ width: "84px" }}
-          />
+          <Link to="/">
+            <img
+              src="/images/kvadrat-logo.png"
+              alt="Applicaiton logo"
+              style={{ width: "84px" }}
+            />
+          </Link>
         </Toolbar>
       </AppBar>
     </Box>
