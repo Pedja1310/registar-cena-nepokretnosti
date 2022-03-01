@@ -7,50 +7,40 @@ import opstine from "../data/opstine";
 import { useState } from "react";
 
 const LocationMenu = ({ setCityId, setCityCadasterId }) => {
-  const [katastarskeOpstine, setKatastarskeOpstine] = useState([]);
+  // const [katastarskeOpstine, setKatastarskeOpstine] = useState([]);
 
-  const handleDisabledDropdown = (e) => {
-    setCityId(e.target.value);
+  // const handleDisabledDropdown = (e) => {
+  //   setCityId(e.target.value);
 
-    const opstina = opstine.find((item) => item.id === e.target.value);
+  //   const opstina = opstine.find((item) => item.id === e.target.value);
 
-    setKatastarskeOpstine(opstina.katastarskeOpstine);
-  };
+  //   setKatastarskeOpstine(opstina.katastarskeOpstine);
+  // };
 
-  const handleCityCadasterId = (e) => {
-    setCityCadasterId(e.target.value);
-  };
+  // const handleCityCadasterId = (e) => {
+  //   setCityCadasterId(e.target.value);
+  // };
 
   return (
     <>
-      <FormControl fullWidth>
-        <InputLabel id="opstina">Opstina</InputLabel>
+      <FormControl fullWidth sx={{ marginBottom: "1rem" }}>
+        <InputLabel
+          id="opstina"
+          shrink={false}
+          sx={{ fontSize: ".9rem", color: "#535EDE" }}
+        >
+          Unesite Naziv Opstine
+        </InputLabel>
         <Select
           defaultValue=""
           labelId="opstina"
           label="Opstina"
-          sx={{ mb: "1rem" }}
-          onChange={handleDisabledDropdown}
+          // onChange={}
+          sx={{ backgroundColor: "white", borderRadius: 80 }}
         >
           {opstine.map((op) => (
             <MenuItem value={op.id} key={op.id}>
               {op.nazivOpstine}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-      <FormControl fullWidth disabled={katastarskeOpstine.length === 0}>
-        <InputLabel id="katastarskeOpstine">Kat. Opstina</InputLabel>
-        <Select
-          defaultValue=""
-          labelId="opstina"
-          label="Opstina"
-          sx={{ mb: "1rem" }}
-          onChange={handleCityCadasterId}
-        >
-          {katastarskeOpstine.map((katOp) => (
-            <MenuItem value={katOp.id} key={katOp.id}>
-              {katOp.naziv}
             </MenuItem>
           ))}
         </Select>
