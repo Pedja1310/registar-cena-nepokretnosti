@@ -26,24 +26,23 @@ const LandingPage = () => {
           U <span style={{ textDecoration: "underline" }}>3 laka koraka</span>{" "}
           saznaj realnu prosecnu cenu kvadrata na zeljenoj lokaciji u Beogradu
         </Typography>
-        <Link to="/form">
-          <Button
-            to="/form"
-            sx={{
-              backgroundColor: "#FFBB00",
-              color: "#080F58",
-              borderRadius: 80,
-              width: "100%",
-              height: "3rem",
-              marginBottom: "1rem",
-              marginTop: "5rem",
-              fontSize: ".7rem",
-              fontWeight: "bold",
-            }}
-          >
-            saznaj cenu kvadrata
-          </Button>
-        </Link>
+        <Button
+          component={Link}
+          to="/form"
+          sx={{
+            backgroundColor: "#FFBB00",
+            color: "#080F58",
+            borderRadius: 80,
+            width: "100%",
+            height: "3rem",
+            marginBottom: "1rem",
+            marginTop: "5rem",
+            fontSize: ".7rem",
+            fontWeight: "bold",
+          }}
+        >
+          saznaj cenu kvadrata
+        </Button>
         <Button
           variant="outlined"
           sx={{
