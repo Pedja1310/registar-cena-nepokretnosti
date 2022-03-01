@@ -18,7 +18,7 @@ const Header = () => {
             <img
               src="/images/kvadrat-logo.png"
               alt="Applicaiton logo"
-              style={{ width: "84px" }}
+              style={{ width: "100px", marginBottom: "-1rem" }}
             />
           </Link>
         </Toolbar>
