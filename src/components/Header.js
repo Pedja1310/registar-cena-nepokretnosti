@@ -1,6 +1,5 @@
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Toolbar from "@mui/material/Toolbar";
 
 const Header = () => {
@@ -9,7 +8,7 @@ const Header = () => {
       <AppBar position="static" sx={{ boxShadow: 0 }}>
         <Toolbar
           sx={{
-            height: 77,
+            height: "15vh",
             backgroundColor: "#EFF3FF",
             justifyContent: "center",
           }}
