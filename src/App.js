@@ -8,6 +8,7 @@ import Search from "./components/Search";
 import DataDisplay from "./components/DataDisplay";
 
 import store from "./store";
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -15,11 +16,7 @@ function App() {
       <CssBaseline />
       <Grid container direction="row">
         <Provider store={store}>
-          <Search />
-          <Grid container item direction="column" lg={10}>
-            <Map />
-            <DataDisplay />
-          </Grid>
+          <Header />
         </Provider>
       </Grid>
     </>
