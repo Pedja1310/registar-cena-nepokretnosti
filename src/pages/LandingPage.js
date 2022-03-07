@@ -44,6 +44,8 @@ const LandingPage = () => {
           saznaj cenu kvadrata
         </Button>
         <Button
+          component={Link}
+          to="/map"
           variant="outlined"
           sx={{
             borderColor: "white",
