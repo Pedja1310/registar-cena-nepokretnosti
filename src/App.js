@@ -12,6 +12,7 @@ import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import FormPage from "./pages/FormPage";
+import MapPage from "./pages/MapPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/form" element={<FormPage />} />
+          <Route path="/map" element={<MapPage />} />
         </Routes>
       </Provider>
     </>
