@@ -1,7 +1,7 @@
 import axios from "axios";
 import { GET_CONTRACTS, GET_AVERAGE_PRICE, SET_LOADING } from "../constants";
 
-export const getData = (requestData) => async (dispatch) => {
+export const getData = (requestData, navigate) => async (dispatch) => {
   try {
     dispatch({ type: SET_LOADING });
 
@@ -21,6 +21,7 @@ export const getData = (requestData) => async (dispatch) => {
     dispatch({ type: GET_AVERAGE_PRICE, payload: stats.averagePrice });
 
     dispatch({ type: SET_LOADING });
+    navigate("/search-results");
   } catch (error) {
     console.error(error);
   }

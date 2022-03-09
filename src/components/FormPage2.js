@@ -1,15 +1,19 @@
 import { Button, Typography } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 import { Box } from "@mui/system";
 import PeriodPicker from "./PeriodPicker";
 import { getData } from "../store/actions/dataActions";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const FormPage2 = ({ changeFormPage }) => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { requestData } = useSelector((state) => state);
+  const { loading } = useSelector((state) => state.data);
 
   const getDataFromDB = () => {
-    dispatch(getData(requestData));
+    dispatch(getData(requestData, navigate));
   };
 
   return (
@@ -76,7 +80,11 @@ const FormPage2 = ({ changeFormPage }) => {
         }}
         onClick={getDataFromDB}
       >
-        potvrdi
+        {loading ? (
+          <CircularProgress sx={{ color: "#080F58" }} size={25} />
+        ) : (
+          "Potvrdi"
+        )}
       </Button>
       <Box sx={{ height: "3rem", textAlign: "center", width: "85%" }}>
         <Typography
