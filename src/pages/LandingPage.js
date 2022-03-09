@@ -11,7 +11,7 @@ const LandingPage = () => {
       sx={{
         backgroundImage: `url(${"/images/background-image.png"})`,
         backgroundSize: "cover",
-        height: "85vh",
+        height: "90vh",
         paddingX: "2rem",
         width: "100%",
         borderTopLeftRadius: 25,
@@ -39,6 +39,9 @@ const LandingPage = () => {
             marginTop: "5rem",
             fontSize: ".7rem",
             fontWeight: "bold",
+            "&:hover": {
+              backgroundColor: "#FFBB00",
+            },
           }}
         >
           saznaj cenu kvadrata
@@ -53,6 +56,10 @@ const LandingPage = () => {
             height: "3rem",
             fontWeight: "bold",
             fontSize: ".7rem",
+            "&:hover": {
+              backgroundColor: "transparent",
+              borderColor: "white",
+            },
           }}
         >
           vise informacija
