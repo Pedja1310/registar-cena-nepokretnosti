@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import municipalities from "../data/municipalities";
@@ -16,25 +15,27 @@ const MunicipalityPicker = () => {
     }
   };
 
-  console.log(municipality);
-
   return (
     <Autocomplete
-      variant={!municipality && "danger"}
       disablePortal
-      id="combo-box-demo"
       options={municipalities}
+      value={municipality?.id ? municipality : "Opstina"}
+      isOptionEqualToValue={(option, value) => option.id !== value.id}
       onChange={(e, value) => setMunicipality(value)}
       sx={{
-        adornedStart: "none",
         width: "100%",
+        color: "#535EDE",
         backgroundColor: "white",
         borderRadius: "80px",
         marginBottom: "1rem",
         borderStyle: "none",
         outline: "none",
+        notchedOutline: "false",
+        "& fieldset": {
+          borderRadius: "80px",
+        },
       }}
-      renderInput={(params) => <TextField {...params} label="Opstina" />}
+      renderInput={(params) => <TextField {...params} />}
     />
   );
 };
