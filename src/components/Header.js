@@ -9,7 +9,7 @@ const Header = () => {
       <AppBar position="static" sx={{ boxShadow: 0 }}>
         <Toolbar
           sx={{
-            height: "15vh",
+            height: "10vh",
             backgroundColor: "#EFF3FF",
             justifyContent: "center",
           }}
@@ -18,7 +18,7 @@ const Header = () => {
             <img
               src="/images/kvadrat-logo.png"
               alt="Applicaiton logo"
-              style={{ width: "100px", marginBottom: "-1rem" }}
+              style={{ width: "100px" }}
             />
           </Link>
         </Toolbar>

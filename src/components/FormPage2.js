@@ -1,84 +1,106 @@
-import { Button, Container, Typography } from "@mui/material";
-import LocationMenu from "../components/LocationMenu";
+import { Button, Typography } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 import { Box } from "@mui/system";
+import PeriodPicker from "./PeriodPicker";
+import { getData } from "../store/actions/dataActions";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const FormPage2 = ({ changeFormPage }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { requestData } = useSelector((state) => state);
+  const { loading } = useSelector((state) => state.data);
+
+  const getDataFromDB = () => {
+    dispatch(getData(requestData, navigate));
+  };
+
   return (
-    <Container
-      maxWidth={false}
+    <Box
       sx={{
-        backgroundImage: `url(${"/images/background-image.png"})`,
-        backgroundSize: "cover",
-        height: "85vh",
-        paddingX: "2rem",
         width: "100%",
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
         alignItems: "center",
         display: "flex",
         justifyContent: "center",
+        flexDirection: "column",
+        flex: 1,
       }}
     >
       <Box
         sx={{
-          width: "100%",
+          display: "grid",
+          gridTemplateColumns: "1fr auto 1fr",
           alignItems: "center",
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
+          marginBottom: "5rem",
+          width: "100%",
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginBottom: "3rem",
-            width: "100%",
-          }}
+        <Button
+          sx={{ width: "1rem", padding: 0 }}
+          onClick={() => changeFormPage(1)}
         >
-          <Button onChange={() => changeFormPage(1)}>
-            <img
-              src="/images/arrow-back-white.png"
-              alt="Back button"
-              style={{ height: "1.25rem", marginRight: "2rem" }}
-            />
-          </Button>
-          <Typography variant="h6" sx={{ color: "white" }}>
-            Izaberi Opstinu
-          </Typography>
-        </Box>
+          <img src="/images/arrow-back-white.png" alt="Back button" />
+        </Button>
+        <Typography variant="h5" sx={{ color: "white" }}>
+          Izaberi Period
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          width: "10rem",
+          height: "10rem",
+          display: "grid",
+          justifyContent: "center",
+          alignItems: "center",
+          marginBottom: "5rem",
+        }}
+      >
         <img
           src="/images/date-icon.png"
           alt="Planet icon"
-          style={{ width: 100, alignSelf: "center", marginBottom: "5rem" }}
+          style={{ width: 100, alignSelf: "center" }}
         />
-        <LocationMenu />
-        <Button
-          to="/form"
-          sx={{
+      </Box>
+      <PeriodPicker />
+      <Button
+        to="/form"
+        sx={{
+          backgroundColor: "#FFBB00",
+          color: "#080F58",
+          borderRadius: 80,
+          width: "100%",
+          height: "3.5rem",
+          marginBottom: "1rem",
+          fontSize: ".7rem",
+          fontWeight: 800,
+          "&:hover": {
             backgroundColor: "#FFBB00",
-            color: "#080F58",
-            borderRadius: 80,
-            width: "100%",
-            height: "3rem",
-            marginBottom: "1rem",
-            fontSize: ".7rem",
-            fontWeight: 800,
-          }}
-          onClick={() => changeFormPage(3)}
-        >
-          potvrdi
-        </Button>
+          },
+        }}
+        onClick={getDataFromDB}
+      >
+        {loading ? (
+          <CircularProgress sx={{ color: "#080F58" }} size={25} />
+        ) : (
+          "Potvrdi"
+        )}
+      </Button>
+      <Box sx={{ height: "3rem", textAlign: "center", width: "85%" }}>
         <Typography
           variant="caption"
-          sx={{ fontSize: ".6rem", color: "white", width: "85%" }}
+          sx={{
+            fontSize: ".6rem",
+            color: "white",
+            width: "85%",
+            textAlign: "center",
+          }}
         >
           Prosecna cena kvadrata je na teritoriji Beograda porasla za 27341% u
           odnosu na 2020. godinu
         </Typography>
       </Box>
-    </Container>
+    </Box>
   );
 };
 
