@@ -50,7 +50,7 @@ const FormPage1 = ({ changeFormPage }) => {
           color: "#080F58",
           borderRadius: 80,
           width: "100%",
-          height: "3rem",
+          height: "3.5rem",
           marginBottom: "1rem",
           fontSize: ".7rem",
           fontWeight: 800,

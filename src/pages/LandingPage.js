@@ -22,7 +22,7 @@ const LandingPage = () => {
       }}
     >
       <Box>
-        <Typography variant="h6" sx={{ color: "white", fontWeight: "bold" }}>
+        <Typography variant="h6" sx={{ color: "white", fontWeight: "800" }}>
           U <span style={{ textDecoration: "underline" }}>3 laka koraka</span>{" "}
           saznaj realnu prosecnu cenu kvadrata na zeljenoj lokaciji u Beogradu
         </Typography>
@@ -34,7 +34,7 @@ const LandingPage = () => {
             color: "#080F58",
             borderRadius: 80,
             width: "100%",
-            height: "3rem",
+            height: "3.5rem",
             marginBottom: "1rem",
             marginTop: "5rem",
             fontSize: ".7rem",
@@ -53,7 +53,7 @@ const LandingPage = () => {
             color: "white",
             borderRadius: 80,
             width: "100%",
-            height: "3rem",
+            height: "3.5rem",
             fontWeight: "bold",
             fontSize: ".7rem",
             "&:hover": {
