@@ -7,6 +7,7 @@ import theme from "./muiTheme";
 import Header from "./components/Header";
 import LandingPage from "./pages/LandingPage";
 import FormPage from "./pages/FormPage";
+import MapPage from "./pages/MapPage";
 import SearchResultsPage from "./pages/SearchResultsPage";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/form" element={<FormPage />} />
+            <Route path="/map" element={<MapPage />} />
             <Route path="/search-results" element={<SearchResultsPage />} />
           </Routes>
         </Provider>
