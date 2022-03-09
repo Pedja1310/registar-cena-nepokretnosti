@@ -17,7 +17,7 @@ const FormPage = () => {
       sx={{
         backgroundImage: `url(${"/images/background-image.png"})`,
         backgroundSize: "cover",
-        height: "85vh",
+        height: "90vh",
         paddingX: "2rem",
         width: "100%",
         borderTopLeftRadius: 25,
