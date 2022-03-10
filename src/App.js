@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import LandingPage from "./pages/LandingPage";
 import FormPage from "./pages/FormPage";
 import SearchResultsPage from "./pages/SearchResultsPage";
+import DetailedResultsPage from "./pages/DetailedResultsPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/form" element={<FormPage />} />
             <Route path="/search-results" element={<SearchResultsPage />} />
+            <Route path="/detailed-results" element={<DetailedResultsPage />} />
           </Routes>
         </Provider>
       </ThemeProvider>

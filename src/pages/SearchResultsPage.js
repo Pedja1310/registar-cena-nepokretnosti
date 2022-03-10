@@ -18,10 +18,8 @@ const SearchResultsPage = () => {
         borderTopRightRadius: 25,
         paddingX: 0,
         paddingTop: "4rem",
-        // alignItems: "center",
         display: "flex",
         flexDirection: "column",
-        // justifyContent: "center",
       }}
     >
       <Box
@@ -57,7 +55,7 @@ const SearchResultsPage = () => {
       <Box sx={{ alignSelf: "center", width: "85%", marginTop: "2rem" }}>
         <Button
           component={Link}
-          to="/form"
+          to="/detailed-results"
           sx={{
             backgroundColor: "#FFBB00",
             color: "#080F58",
