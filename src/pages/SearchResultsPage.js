@@ -17,7 +17,7 @@ const SearchResultsPage = () => {
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
         paddingX: 0,
-        paddingTop: "4rem",
+        paddingTop: "3rem",
         display: "flex",
         flexDirection: "column",
       }}
