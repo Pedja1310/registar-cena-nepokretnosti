@@ -1,7 +1,8 @@
 import { Container } from "@mui/material";
-import { MapContainer, TileLayer, FeatureGroup } from "react-leaflet";
+import { MapContainer, TileLayer, FeatureGroup, Polygon } from "react-leaflet";
 import { EditControl } from "react-leaflet-draw";
-import { Box } from "@mui/system";
+
+import polygonData from "../data/polygon";
 import "leaflet-draw/dist/leaflet.draw.css";
 
 const MapPage = () => {
@@ -20,6 +21,8 @@ const MapPage = () => {
   const handleOnDeleted = (e) => {
     console.log("Polygon deleted.");
   };
+
+  console.log(polygonData.coordinates[0]);
 
   return (
     <Container sx={{ height: "60vh", width: "80%", padding: 0 }}>
@@ -48,8 +51,11 @@ const MapPage = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <Polygon
+          pathOptions={{ color: "purple" }}
+          positions={polygonData.coordinates[0]}
+        />
       </MapContainer>
-      <Box></Box>
     </Container>
   );
 };
