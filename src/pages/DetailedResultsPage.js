@@ -86,6 +86,9 @@ const DetailedResultsPage = () => {
           </Button>
         </Box>
       </Box>
+      <Box sx={{ backgroundColor: "white", height: "3rem" }}>
+        <Typography>Pagination</Typography>
+      </Box>
       <Box sx={{ height: "100%", width: "100%" }}>
         {contracts.map((contract, index) => (
           <Apartment
