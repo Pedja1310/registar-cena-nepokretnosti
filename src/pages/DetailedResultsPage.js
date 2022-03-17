@@ -24,7 +24,7 @@ const DetailedResultsPage = () => {
       <Box
         sx={{
           backgroundImage: `url(${"/images/result-background.png"})`,
-          height: "5rem",
+          height: "4rem",
           marginTop: "2.5rem",
           display: "flex",
           alignItems: "center",
@@ -60,7 +60,7 @@ const DetailedResultsPage = () => {
               color: "#080F58",
             }}
           >
-            {averagePrice.amount}.00&euro;
+            {Math.round(averagePrice.amount)}&euro;
           </Typography>
         </Box>
         <Box
