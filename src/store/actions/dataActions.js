@@ -13,7 +13,11 @@ export const getData = (requestData, navigate) => async (dispatch) => {
     const { data: contracts } = await axios.get(
       "https://warm-river-64553.herokuapp.com/https://prosecankvadrat.herokuapp.com/web/v1/contracts",
       {
-        params: { perPage: 100, page: 0 },
+        params: {
+          perPage: 100,
+          page: 0,
+          municipality: requestData.municipality.id,
+        },
       }
     );
 
