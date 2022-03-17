@@ -1,10 +1,16 @@
 import { Container, Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { clearRequestDataAction } from "../store/actions/requestDataActions";
 
 const SearchResultsPage = () => {
+  const dispatch = useDispatch();
   const { averagePrice } = useSelector((state) => state.data);
+
+  const clearRequestData = () => {
+    dispatch(clearRequestDataAction());
+  };
 
   return (
     <Container
@@ -74,7 +80,10 @@ const SearchResultsPage = () => {
           Detalji pretrage
         </Button>
         <Button
+          component={Link}
+          to="/form"
           variant="outlined"
+          onClick={clearRequestData}
           sx={{
             borderColor: "white",
             color: "white",
