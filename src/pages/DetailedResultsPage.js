@@ -29,7 +29,7 @@ const DetailedResultsPage = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          paddingX: "1rem",
+          paddingX: "2rem",
         }}
       >
         <Box
@@ -86,8 +86,16 @@ const DetailedResultsPage = () => {
           </Button>
         </Box>
       </Box>
-      <Box sx={{ backgroundColor: "white", height: "3rem" }}>
-        <Typography>Pagination</Typography>
+      <Box
+        sx={{
+          backgroundColor: "white",
+          height: "3rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Typography>PAGINATION</Typography>
       </Box>
       <Box sx={{ height: "100%", width: "100%" }}>
         {contracts.map((contract, index) => (
