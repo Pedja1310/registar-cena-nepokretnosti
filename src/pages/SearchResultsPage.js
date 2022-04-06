@@ -69,7 +69,6 @@ const SearchResultsPage = () => {
             width: "100%",
             height: "3.5rem",
             marginBottom: "1rem",
-
             fontSize: ".7rem",
             fontWeight: "bold",
             "&:hover": {
