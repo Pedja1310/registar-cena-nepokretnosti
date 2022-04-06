@@ -20,7 +20,7 @@ const FormPage2 = ({ changeFormPage }) => {
   return (
     <Box
       sx={{
-        width: { xs: "100%", md: "20%" },
+        width: { sm: "50%", md: "35%", lg: "25%", xl: "20" },
         alignItems: "center",
         display: "flex",
         justifyContent: "center",
