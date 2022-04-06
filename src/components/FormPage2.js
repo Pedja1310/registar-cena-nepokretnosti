@@ -5,6 +5,7 @@ import PeriodPicker from "./PeriodPicker";
 import { getData } from "../store/actions/dataActions";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { IconButton } from "@mui/material";
 
 const FormPage2 = ({ changeFormPage }) => {
   const navigate = useNavigate();
@@ -19,12 +20,11 @@ const FormPage2 = ({ changeFormPage }) => {
   return (
     <Box
       sx={{
-        width: "100%",
+        width: { xs: "100%", md: "20%" },
         alignItems: "center",
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
-        flex: 1,
       }}
     >
       <Box
@@ -32,16 +32,22 @@ const FormPage2 = ({ changeFormPage }) => {
           display: "grid",
           gridTemplateColumns: "1fr auto 1fr",
           alignItems: "center",
-          marginBottom: "5rem",
+          marginBottom: "3rem",
           width: "100%",
         }}
       >
-        <Button
-          sx={{ width: "1rem", padding: 0 }}
-          onClick={() => changeFormPage(1)}
+        <IconButton
+          edge="start"
+          disableRipple={true}
+          sx={{ width: "43px", padding: 0 }}
+          onClick={() =>
+            setTimeout(() => {
+              changeFormPage(1);
+            }, 100)
+          }
         >
           <img src="/images/arrow-back-white.png" alt="Back button" />
-        </Button>
+        </IconButton>
         <Typography variant="h5" sx={{ color: "white" }}>
           Izaberi Period
         </Typography>
@@ -53,7 +59,7 @@ const FormPage2 = ({ changeFormPage }) => {
           display: "grid",
           justifyContent: "center",
           alignItems: "center",
-          marginBottom: "5rem",
+          marginBottom: "3rem",
         }}
       >
         <img

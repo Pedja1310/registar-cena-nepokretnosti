@@ -6,7 +6,7 @@ const FormPage1 = ({ changeFormPage }) => {
   return (
     <Box
       sx={{
-        width: "100%",
+        width: { xs: "100%", md: "20%" },
         alignItems: "center",
         display: "flex",
         justifyContent: "center",
@@ -15,7 +15,7 @@ const FormPage1 = ({ changeFormPage }) => {
     >
       <Box
         sx={{
-          marginBottom: "5rem",
+          marginBottom: "3rem",
           width: "100%",
           display: "grid",
           justifyContent: "center",
@@ -33,7 +33,7 @@ const FormPage1 = ({ changeFormPage }) => {
           display: "grid",
           justifyContent: "center",
           alignItems: "center",
-          marginBottom: "5rem",
+          marginBottom: "3rem",
         }}
       >
         <img
@@ -58,7 +58,11 @@ const FormPage1 = ({ changeFormPage }) => {
             backgroundColor: "#FFBB00",
           },
         }}
-        onClick={() => changeFormPage(2)}
+        onClick={() =>
+          setTimeout(() => {
+            changeFormPage(2);
+          }, 150)
+        }
       >
         potvrdi
       </Button>
