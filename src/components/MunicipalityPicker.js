@@ -22,6 +22,7 @@ const MunicipalityPicker = () => {
       value={municipality?.id ? municipality : "Opstina"}
       isOptionEqualToValue={(option, value) => option.id !== value.id}
       onChange={(e, value) => setMunicipality(value)}
+      blurOnSelect={false}
       sx={{
         width: "100%",
         color: "#535EDE",
