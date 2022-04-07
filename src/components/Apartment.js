@@ -95,6 +95,7 @@ const Apartment = ({ contract, index }) => {
             center={contract.cordinates}
             zoom={14}
             scrollWheelZoom={true}
+            dragging={false}
             style={{ height: "100%", width: "100%" }}
           >
             <TileLayer
