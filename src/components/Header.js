@@ -9,7 +9,7 @@ const Header = () => {
       <AppBar position="static" sx={{ boxShadow: 0 }}>
         <Toolbar
           sx={{
-            minHeight: { xs: "10vh", sm: "8vh" },
+            minHeight: { xs: "10%", sm: "8%" },
             backgroundColor: "#EFF3FF",
             justifyContent: "center",
           }}

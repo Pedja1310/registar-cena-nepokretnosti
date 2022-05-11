@@ -11,7 +11,7 @@ const LandingPage = () => {
       sx={{
         backgroundImage: `url(${"/images/background-image.png"})`,
         backgroundSize: "cover",
-        height: { xs: "90vh", sm: "92vh" },
+        height: { xs: "90%", sm: "92%" },
         paddingX: "2rem",
         width: "100%",
         borderTopLeftRadius: { xs: "25px", sm: "0px" },

@@ -18,7 +18,7 @@ const SearchResultsPage = () => {
       sx={{
         backgroundImage: `url(${"/images/background-image.png"})`,
         backgroundSize: "cover",
-        height: "90vh",
+        height: { xs: "90%", sm: "92%" },
         width: "100%",
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
