@@ -6,68 +6,70 @@ import { Box } from "@mui/system";
 
 const LandingPage = () => {
   return (
-    <Container
-      maxWidth={false}
-      sx={{
-        backgroundImage: `url(${"/images/background-image.png"})`,
-        backgroundSize: "cover",
-        height: { xs: "90%", sm: "92%" },
-        paddingX: "2rem",
-        width: "100%",
-        borderTopLeftRadius: { xs: "25px", sm: "0px" },
-        borderTopRightRadius: { xs: "25px", sm: "0px" },
-        alignItems: "center",
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <Box>
-        <Typography variant="h6" sx={{ color: "white", fontWeight: "800" }}>
-          U <span style={{ textDecoration: "underline" }}>2 koraka</span> saznaj
-          realnu prosecnu cenu kvadrata na zeljenoj lokaciji u Beogradu
-        </Typography>
-        <Button
-          component={Link}
-          to="/form"
-          sx={{
-            backgroundColor: "#FFBB00",
-            color: "#080F58",
-            borderRadius: 80,
-            width: "100%",
-            height: "3.5rem",
-            marginBottom: "1rem",
-            marginTop: "5rem",
-            fontSize: ".7rem",
-            fontWeight: "bold",
-            "&:hover": {
+    <Box>
+      <Container
+        maxWidth={false}
+        sx={{
+          backgroundImage: `url(${"/images/background-image.png"})`,
+          backgroundSize: "cover",
+          height: { xs: "90vh", sm: "92vh" },
+          paddingX: "2rem",
+          width: "100%",
+          borderTopLeftRadius: { xs: "25px", sm: "0px" },
+          borderTopRightRadius: { xs: "25px", sm: "0px" },
+          alignItems: "center",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Box>
+          <Typography variant="h6" sx={{ color: "white", fontWeight: "800" }}>
+            U <span style={{ textDecoration: "underline" }}>2 koraka</span>{" "}
+            saznaj realnu prosecnu cenu kvadrata na zeljenoj lokaciji u Beogradu
+          </Typography>
+          <Button
+            component={Link}
+            to="/form"
+            sx={{
               backgroundColor: "#FFBB00",
-            },
-          }}
-        >
-          saznaj cenu kvadrata
-        </Button>
-        <Button
-          component={Link}
-          to="/map"
-          variant="outlined"
-          sx={{
-            borderColor: "white",
-            color: "white",
-            borderRadius: 80,
-            width: "100%",
-            height: "3.5rem",
-            fontWeight: "bold",
-            fontSize: ".7rem",
-            "&:hover": {
-              backgroundColor: "transparent",
+              color: "#080F58",
+              borderRadius: 80,
+              width: "100%",
+              height: "3.5rem",
+              marginBottom: "1rem",
+              marginTop: "5rem",
+              fontSize: ".7rem",
+              fontWeight: "bold",
+              "&:hover": {
+                backgroundColor: "#FFBB00",
+              },
+            }}
+          >
+            saznaj cenu kvadrata
+          </Button>
+          <Button
+            component={Link}
+            to="/map"
+            variant="outlined"
+            sx={{
               borderColor: "white",
-            },
-          }}
-        >
-          vise informacija
-        </Button>
-      </Box>
-    </Container>
+              color: "white",
+              borderRadius: 80,
+              width: "100%",
+              height: "3.5rem",
+              fontWeight: "bold",
+              fontSize: ".7rem",
+              "&:hover": {
+                backgroundColor: "transparent",
+                borderColor: "white",
+              },
+            }}
+          >
+            vise informacija
+          </Button>
+        </Box>
+      </Container>
+    </Box>
   );
 };
 
