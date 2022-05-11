@@ -11,7 +11,7 @@ const LandingPage = () => {
       sx={{
         backgroundImage: `url(${"/images/background-image.png"})`,
         backgroundSize: "cover",
-        height: { sm: "90vh", md: "95vh" },
+        height: { xs: "90vh", sm: "92vh" },
         paddingX: "2rem",
         width: "100%",
         borderTopLeftRadius: { xs: "25px", sm: "0px" },
@@ -23,8 +23,8 @@ const LandingPage = () => {
     >
       <Box>
         <Typography variant="h6" sx={{ color: "white", fontWeight: "800" }}>
-          U <span style={{ textDecoration: "underline" }}>3 laka koraka</span>{" "}
-          saznaj realnu prosecnu cenu kvadrata na zeljenoj lokaciji u Beogradu
+          U <span style={{ textDecoration: "underline" }}>2 koraka</span> saznaj
+          realnu prosecnu cenu kvadrata na zeljenoj lokaciji u Beogradu
         </Typography>
         <Button
           component={Link}
