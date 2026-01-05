@@ -17,6 +17,7 @@
     "array-equal": "^1.0.0",
     "axios": "^0.24.0",
     "date-fns": "^2.27.0",
+    "fs-extra": "^11.3.3",
     "gh-pages": "^3.2.3",
     "leaflet": "^1.7.1",
     "leaflet-draw": "^1.0.4",
@@ -28,7 +29,7 @@
     "react-leaflet-draw": "^0.19.8",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",
@@ -52,5 +53,8 @@
     ">0.2%",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "ajv": "^7.2.4"
+  }
 }
